@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* variables */
+:root{
+  --pink:#ff7ab6;
+  --cyan:#6dd3ff;
+  --purple:#9b5de5;
+}
+
+/* full height */
+html,body,#root { height:100%; }
+
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#2a0b3a 0%, #6b2e6f 45%, #071127 100%);
+  color: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* ribbon / border gradient used for frames */
+.border-gradient-purple{
+  border-image-source: linear-gradient(90deg, var(--pink), var(--purple));
+  border-image-slice: 1;
+}
+
+/* big visible headings */
+h1,h2 { letter-spacing:-0.01em; }
+
+/* framed photo border helper */
+.border-gradient-purple { border-width: 8px; }
+
+/* nice glow around frames and main cards */
+.shadow-2xl { box-shadow: 0 30px 90px rgba(5,4,12,0.6); }
+
+/* center big SVG / cake */
+svg { display: block; }
+
+/* big prose for love letter */
+.prose p { margin: .45rem 0; font-size: 1.05rem; line-height:1.5; color:#f3ebff; }
+
+/* ribbon strip style (top/bottom) */
+.ribbon-strip{
+  height:56px;
+  background: linear-gradient(90deg,#ff3b7a,#ffd166,#34d399,#60a5fa);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35), inset 0 -6px 18px rgba(255,255,255,0.04);
+  border-radius: 8px;
+  opacity: .9;
+}
+
+/* festival border gradient used in frames */
+.border-gradient-purple { border-radius: 18px; }
+
+/* rounded containers */
+.rounded-3xl { border-radius: 1.5rem; }
+
+/* buttons bigger */
+button { transition: transform .18s ease, box-shadow .18s ease; }
+
+/* responsive tweaks */
+@media (max-width: 768px){
+  .ribbon-strip { height:44px; }
+  .border-gradient-purple { border-width: 5px; }
+}
